@@ -3,11 +3,13 @@ name: goreleaser
 on:
   push:
     # run only against tags
+    branches:
+      - main
     tags:
-      - '*'
+      - 'v*'
 
-permissions:
-  contents: write
+# permissions:
+#   contents: write
   # packages: write
   # issues: write
 
