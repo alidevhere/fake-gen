@@ -1,5 +1,7 @@
 # US Fake Numbers Generator
 
+![fake-gen](media/cmd1.png?raw=true "fake-gen")
+
 `fake-gen` is a single command cli tool. It generates US phone numbers in format `AAA-555-NNNN`. `AAA` is area code, and `NNNN` is any random number between 0001 to 9999.
 
 ## Installation:
@@ -46,7 +48,9 @@ OR by using shorthand
 
     fake-gen -l 10 -u -o huge_data -c name -c name -c age -c phone
 
+OR to generate only unique phone numbers add flag --unique or -u
 
+    fake-gen --limit 10 --out huge_data --column name --column name --column age --column phone --unique
 
 ## Example-2:
 
@@ -67,4 +71,6 @@ OR by using shorthand
 
     fake-gen -l 10 -u -o huge_data -c name -c name -c age -c phone -c phone -c phone
 
+OR to generate only unique phone numbers add flag --unique or -u
 
+    fake-gen -l 10 -u -o huge_data -c name -c name -c age -c phone -c phone -c phone -u
