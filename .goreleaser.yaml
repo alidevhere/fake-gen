@@ -7,39 +7,20 @@ before:
     # you may remove this if you don't need go generate
     - go generate ./...
 builds:
-  - binary: fake-gen
+  - main: main.go
   - env:
       - CGO_ENABLED=0
     goos:
       - linux
       - windows
       - darwin
-    goarch:
-      - amd64
-      - arm64
-    # Run go mod vendor
-    # Uses binaries in vendor folder instead of downloading new from internet
-    flags:
-      - -mod=vendor
-# doesnot distribute prerelease versions
-release:
-  prerelease: auto
-# Home Brew Tap
-# universal_binaries:
-#   - replace: true
-# brews:
-#   -
-#     name: fake-gen
-#     homepage: https://github.com/alidevhere/fake-gen
-#     tap:
-#       owner: https://github.com/alidevhere/fake-gen
 archives:
-  - replacements:
-      darwin: Darwin
-      linux: Linux
-      windows: Windows
-      386: i386
-      amd64: x86_64
+  replacements:
+    darwin: Darwin
+    linux: Linux
+    windows: Windows
+    386: i386
+    amd64: x86_64
 checksum:
   name_template: 'checksums.txt'
 snapshot:
@@ -51,3 +32,6 @@ changelog:
       - '^docs:'
       - '^test:'
 
+# modelines, feel free to remove those if you don't want/use them:
+# yaml-language-server: $schema=https://goreleaser.com/static/schema.json
+# vim: set ts=2 sw=2 tw=0 fo=cnqoj
