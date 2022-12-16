@@ -15,6 +15,7 @@ var (
 	limit       uint64
 	outFileName string
 	columns     []string
+	unique      bool
 
 	columnsSupported []string = []string{"name", "phone", "age"}
 )
@@ -36,8 +37,8 @@ to quickly create a Cobra application.`,
 		if len(columns) == 0 {
 			columns = columnsSupported
 		}
-		println("cols ", len(columns))
-		data := GenerateData(columns, limit)
+		println("cols ", len(columns), " unique : ", unique)
+		data := GenerateData(columns, limit, unique)
 		WriteCsv(outFileName, limit, data...)
 	},
 }
@@ -70,7 +71,7 @@ func init() {
 	if err := rootCmd.MarkFlagRequired("out"); err != nil {
 		fmt.Println(err)
 	}
-
+	rootCmd.Flags().BoolVarP(&unique, "unique", "u", false, "set unique true if want to generate only unique numbers")
 	rootCmd.Flags().StringArrayVar(&columns, "col", columnsSupported, "give columns to be added in output file. Supported columns are  name,phone,age")
 
 }

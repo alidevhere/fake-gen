@@ -21,7 +21,7 @@ func main() {
 }
 
 func ReadConv() {
-	f, err := os.Open("2.csv")
+	f, err := os.Open("males.csv")
 
 	if err != nil {
 
