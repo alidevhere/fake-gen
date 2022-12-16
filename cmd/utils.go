@@ -47,7 +47,6 @@ func getRandNum(unique bool) string {
 			uniqueNums[n] = true
 			return n
 		} else {
-
 			for {
 				n := fmt.Sprintf("%d%d", getRandUsAreaCodes(), r.Intn(9998)+5550001)
 				if _, ok := uniqueNums[n]; !ok {
