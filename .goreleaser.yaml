@@ -8,8 +8,8 @@ before:
     - go generate ./...
 builds:
   - main: ./main.go
-    id: "fake-gen"
-    binary: fake-gen
+    # id: "fake-gen"
+    # binary: fake-gen
   - env:
       - CGO_ENABLED=0
     goos:
