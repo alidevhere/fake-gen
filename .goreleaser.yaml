@@ -5,7 +5,7 @@ before:
     - go mod tidy
 builds:
   - main: ./main.go
-    id: "fake_gen"
+    id: "fake_gen_{{ .Target }}"
     # binary: fake-gen
     targets:
      - "darwin_amd64"
