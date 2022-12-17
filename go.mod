@@ -1,4 +1,4 @@
-module github.com/alidevhere/us-fake-numbers-gen
+module github.com/alidevhere/fake-gen
 
 go 1.18
 

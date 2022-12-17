@@ -7,16 +7,19 @@
 ## Installation:
 
 Linux:
+
+    wget https://github.com/alidevhere/fake-gen/releases/download/v0.1.14/fake-gen_0.1.14_linux_amd64
+
+Make is executeable:
+
+    chmod +x fake-gen_0.1.14_linux_amd64
+
+Run 
     
-    sudo-apt install 
+    ./fake-gen_0.1.14_linux_amd64 [flags]
 
-Windows:
 
-    windows install
 
-MacOs:
-
-    brew install
 
 ## Use:
 

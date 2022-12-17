@@ -12,7 +12,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/alidevhere/us-fake-numbers-gen/cmd"
+	"github.com/alidevhere/fake-gen/cmd"
 )
 
 func main() {
