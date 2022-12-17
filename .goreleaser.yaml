@@ -5,7 +5,7 @@ before:
     - go mod tidy
 builds:
   - main: ./main.go
-    id: "fake_gen_{{ .Target }}"
+    id: "fake_gen"
     # binary: fake-gen
     targets:
      - "darwin_amd64"
@@ -18,8 +18,9 @@ builds:
     #   - windows
     #   - darwin
 archives:
-  - builds:
-    - default
+  - format: binary
+  # - builds:
+  #   - default
   # - replacements:
   #     darwin: Darwin
   #     linux: Linux
