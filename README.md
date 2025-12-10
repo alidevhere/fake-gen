@@ -6,17 +6,30 @@
 
 ## Installation:
 
-Linux:
+### Using Go Install (Recommended)
 
-    wget https://github.com/alidevhere/fake-gen/releases/download/v0.1.14/fake-gen_0.1.14_linux_amd64
+If you have Go installed (1.18 or later):
 
-Make is executeable:
+```bash
+go install github.com/alidevhere/fake-gen@latest
+```
 
-    chmod +x fake-gen_0.1.14_linux_amd64
+Make sure your `$GOPATH/bin` (or `$HOME/go/bin`) is in your `PATH`.
 
-Run 
+### Download Binary (Linux)
+
+Alternatively, download the pre-built binary:
+
+```bash
+wget https://github.com/alidevhere/fake-gen/releases/download/v0.1.14/fake-gen_0.1.14_linux_amd64
+chmod +x fake-gen_0.1.14_linux_amd64
+```
+
+Run:
     
-    ./fake-gen_0.1.14_linux_amd64 [flags]
+```bash
+./fake-gen_0.1.14_linux_amd64 [flags]
+```
 
 
 
